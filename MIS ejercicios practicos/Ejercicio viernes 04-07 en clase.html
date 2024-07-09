@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo">Debrable</h1>
+      <nav>
+        <a href="#topPeliculas">Mi top 10 peliculas</a>
+        <a href="#viajeJapon">Mi viaje a Japón</a>
+        <a href="#mensaje">Mandame un mensaje</a>
+      </nav>
+    </header>
+    <main>
+      <section id="seccionPrincipal">
+        <article id="topPeliculas">
+          <h2>Mi top 10 peliculas</h2>
+          <ol id="listaPeliculas">
+            <li>El padrino</li>
+            <li>La lista negra</li>
+            <li>El rey leon</li>
+            <li>timon y pumba</li>
+            <li>dumbo</li>
+            <li>rambo</li>
+            <li>star trek</li>
+            <li>star wars</li>
+            <li>algo</li>
+            <li>otra peli</li>
+          </ol>
+
+          <!-- si queiro poner una lista partida hay que crear 2 listas y poner que la segunda empiece en 6 -->
+        </article>
+        <article id="viajeJapon">
+          <h2>Mi viaje a japon</h2>
+          <img
+            src="https://th.bing.com/th/id/OIP.7CVJ2d29GvD0CjmojqgOQAHaE8?rs=1&pid=ImgDetMain"
+            id="japon"
+            alt=""
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            sint possimus, commodi est repellendus ullam ut libero quod cum
+            ipsum facere vero consequuntur iste suscipit perferendis doloremque
+            assumenda sequi, pariatur aperiam asperiores minima maiores eveniet.
+            Vitae perspiciatis nihil quia alias aliquid. Quod neque est odio
+            obcaecati dignissimos enim quia nobis. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Iste ipsam asperiores dicta nulla
+            quidem explicabo eligendi, blanditiis velit nobis? Possimus.
+          </p>
+        </article>
+      </section>
+      <aside id="contacto">
+        <img
+          src="https://th.bing.com/th/id/R.841161f92c2a9e06d017251c3a41dc0d?rik=mHGT4%2fXwO%2bxbZw&riu=http%3a%2f%2fagencia-fotografia.com%2fwp-content%2fuploads%2f2014%2f06%2fPerfil-fotografia.jpg&ehk=%2bYEDPBWB0woufaWNcn2Uuefx8MU5MOK0HlPec9xuRtA%3d&risl=&pid=ImgRaw&r=0"
+          alt=""
+          id="fotoPerfil"
+        />
+        <strong> Juan Jose </strong>
+        <p>aqui pones lo que quieras</p>
+        <a href="mailto:estoesunejemplo@gmail.com">estoesunejemplo@gmail.com</a>
+      </aside>
+      <section id="mensaje">
+        <h3>Mandame un mensaje</h3>
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="user_name" />
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" />
+
+          <label for="msg">Mensage:</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </form>
+
+        <input type="checkbox" id="checkbox2" name="subscribe" />
+        <label for="checkbox2">Suscribirse al boletín</label>
+        <button type="submit">enviar</button>
+      </section>
+    </main>
+    <footer>
+      <p>terminos y condiciones de privacidad</p>
+    </footer>
+  </body>
+</html>
