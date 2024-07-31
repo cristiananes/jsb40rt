@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+.aprovado {
+  background-color: green;
+  color: white;
+}
+.suspenso {
+  background-color: red;
+  color: white;
+}
