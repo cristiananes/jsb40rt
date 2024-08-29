@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla JavaScript Modal Popup</title>
+    <style>
+      .modal {
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+        height: 100%;
+        left: 0;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        border: 1px solid #888;
+        margin: 15% auto;
+        padding: 20px;
+        width: 80%;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open-modal-btn">Open Modal</button>
+
+    <div class="modal" id="my-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
+    <script>
+      // Your JavaScript code goes here
+      //lo primero que debemos hacer es obtener los elementos del dom
+      const openModal = document.querySelector("#open-modal-btn");
+      const modal = document.querySelector("#my-modal");
+      const closeModal = document.querySelector(".close");
+
+      //necesitamos que cuando toquemos el boton se abra el modal
+      openModal.addEventListener(
+        "click",
+        () => (modal.style.display = "block")
+      );
+      //con ese codigo se activa el display de nuestra clase .modal que por defecto es none
+      //Ahora necesitamos una función para cerrar el modal
+      //remacar que a demas de cerrarse en su botón, necesitamos otra funcion para que cuando este abierto o cerrado al tocar la venatana y no el contenido del modal
+      //se cierre tambien.
+
+      closeModal.addEventListener(
+        "click",
+        () => (modal.style.display = "none")
+      );
+      //ya se nos cierra al darle al boton porque sincronizamos el display none de nuestro  modal al darle al span (que funciona como boton) que tiene asignada la clase close
+      //ahora hay que hacer lo mismo para cuando toques fuera del modal
+      //no me sirve decirle que al tocar la ventana se cierre el modal porque me encontre con el problema de que tampoco se abre le pongo eso, con lo cual creo que con un un if podria solucionar
+      //este problema: "si esta abierto le pones display none sino no haces nada"
+      //el siguiente codigo lo que hace es que si haces click en el modal se cierra el modal, pero el modal no es el contenido del modal por eso no se cierra al clickar en modal-content, porque en ese caso haces clicl en el contenido no el bloque del modal que es lo que se oscurece, de esta manera si clicas un enlace o lo que tenga dentro el modal no se cerrara el contenedor
+      window.addEventListener("click", () => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

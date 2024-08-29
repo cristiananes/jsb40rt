@@ -1,0 +1,29 @@
+{
+    "type": "module",
+    "name": "ejercicio-2",
+    "version": "1.0.0",
+    "description": "Se trata de una web donde los usuarios venden a otros usuarios productos que ya no utilizan.",
+    "main": "app.js",
+    "scripts": {
+        "initdb": "node ./src/db/initDb.js",
+        "dev": "nodemon ./app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "morgan": "^1.10.0",
+        "mysql2": "^3.11.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.0",
+        "eslint": "^9.9.0",
+        "globals": "^15.9.0",
+        "nodemon": "^3.1.4",
+        "prettier": "^3.3.3"
+    }
+}
